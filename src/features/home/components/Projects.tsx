@@ -1,5 +1,5 @@
 import { CodeIcon } from "lucide-react";
-import { CorreiosProject } from "./projects";
+import { ArticleProject, CorreiosProject } from "./projects";
 
 export function Projects() {
   return (
@@ -21,6 +21,8 @@ export function Projects() {
       </div>
 
       <CorreiosProject />
+
+      <ArticleProject />
     </section>
   );
 }
