@@ -16,7 +16,7 @@ export function CorreiosProject() {
         <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed mb-6">
           Uma API de rastreamento de alta performance desenvolvida em Node.js e
           Fastify, projetada sob os princípios da{" "}
-          <strong>Clean Architecture</strong>e <strong>DDD</strong>. A solução
+          <strong>Clean Architecture</strong> e <strong>DDD</strong>. A solução
           atua como um proxy otimizado para consultas aos Correios,
           destacando-se pela implementação de um{" "}
           <strong>Cache Dinâmico Inteligente</strong> (Redis), com TTL ajustável

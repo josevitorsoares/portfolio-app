@@ -140,9 +140,7 @@ export function TrackingWidget() {
         <h3 className="text-xl font-bold flex items-center gap-2 mb-2">
           <PackageSearchIcon size={24} /> Rastro Correios
         </h3>
-        <p className="text-amber-100 text-sm">
-          Integração com API dos Correios
-        </p>
+        <p className="text-sm">Integração com API dos Correios</p>
       </div>
       <div className="p-6 flex-1 flex flex-col">
         <Form {...form}>
