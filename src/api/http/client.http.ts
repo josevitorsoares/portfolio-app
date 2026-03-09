@@ -56,8 +56,8 @@ export async function http<ResponseData = unknown, RequestBody = unknown>(
 ): Promise<HttpResponse<ResponseData>> {
   try {
     const response = await axiosInstance.request<
-      ApiResponse<ResponseData>,
-      AxiosResponse<ApiResponse<ResponseData>>,
+      ApiResponse<ResponseData> | ResponseData,
+      AxiosResponse<ApiResponse<ResponseData> | Blob>,
       RequestBody
     >({
       url: path,
@@ -69,10 +69,19 @@ export async function http<ResponseData = unknown, RequestBody = unknown>(
       },
     });
 
+    if (options?.responseType && options.responseType !== "json") {
+      return {
+        statusCode: response.status,
+        data: response.data as ResponseData,
+      };
+    }
+
+    const jsonResponse = response.data as ApiResponse<ResponseData>;
+
     return {
       statusCode: response.status,
-      data: response.data.data,
-      message: response.data.message,
+      data: jsonResponse.data,
+      message: jsonResponse.message,
     };
   } catch (error) {
     if (error instanceof AxiosError && error.response) {
