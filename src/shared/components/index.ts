@@ -1,4 +1,6 @@
 export * from "./FastifyIcon";
 export * from "./GitHubIcon";
 export * from "./Input";
+export * from "./PDFToolbar";
+export * from "./PDFViewer";
 export * from "./XIcon";
