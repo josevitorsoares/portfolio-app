@@ -9,6 +9,17 @@ lerna-debug.log*
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
 # Runtime data
 pids
 *.pid
@@ -40,6 +51,9 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+dist/
+dist-ssr/
+*.local
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
