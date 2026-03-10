@@ -33,9 +33,11 @@ export function Header({ darkMode, toggleTheme }: HeaderProps) {
             <div className="w-10 h-9 bg-indigo-600 p-1 rounded-lg flex md:hidden items-center justify-center text-white font-bold text-lg shadow-lg shadow-indigo-500/30">
               <LogoIcon className="fill-white" />
             </div>
-            <span className="font-bold text-xl tracking-tight text-slate-800 dark:text-white hidden sm:block">
-              josevitorsoares<span className="text-indigo-600">.dev</span>
-            </span>
+            <a onClick={() => window.location.reload()}>
+              <span className="font-bold text-xl tracking-tight text-slate-800 dark:text-white hidden sm:block cursor-pointer">
+                josevitorsoares<span className="text-indigo-600">.dev</span>
+              </span>
+            </a>
           </div>
 
           <nav className="hidden lg:flex items-center gap-4 sm:gap-6">
