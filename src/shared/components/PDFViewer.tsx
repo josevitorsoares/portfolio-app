@@ -178,7 +178,7 @@ export function PDFViewer({ fileUrl }: PDFViewerProps) {
   return (
     <div
       ref={containerRef}
-      className="relative flex flex-col items-center overflow-auto h-screen w-full bg-white dark:bg-slate-800 py-4"
+      className="relative rounded-md flex flex-col items-center overflow-auto h-screen w-full bg-white dark:bg-slate-800 py-4"
     >
       <Document
         file={fileUrl}
