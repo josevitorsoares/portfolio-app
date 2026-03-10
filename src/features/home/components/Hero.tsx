@@ -11,7 +11,7 @@ import { TechBadge } from "./TechBadge";
 
 export function Hero() {
   return (
-    <section className="relative pt-24 pb-20 overflow-hidden">
+    <section id="hero" className="relative pt-24 pb-20 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-250 h-125 bg-indigo-500/20 rounded-full blur-3xl opacity-30 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
