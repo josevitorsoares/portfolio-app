@@ -1,4 +1,5 @@
 export * from "./AboutMe";
+export * from "./Education";
 export * from "./Header";
 export * from "./Hero";
 export * from "./Projects";
