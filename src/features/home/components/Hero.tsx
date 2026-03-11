@@ -1,4 +1,6 @@
 import { GitHubIcon } from "@/shared/components";
+import { Button } from "@/shared/components/ui";
+import { useSmoothScroll } from "@/shared/hooks";
 import {
   ArrowRightIcon,
   CodeIcon,
@@ -10,6 +12,8 @@ import {
 import { TechBadge } from "./TechBadge";
 
 export function Hero() {
+  const scrollToSection = useSmoothScroll();
+
   return (
     <section id="hero" className="relative pt-24 pb-20 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-250 h-125 bg-indigo-500/20 rounded-full blur-3xl opacity-30 pointer-events-none" />
@@ -37,12 +41,13 @@ export function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="#projects"
-            className="w-full sm:w-auto px-8 py-3.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-lg shadow-indigo-500/30 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
+          <Button
+            className="w-full sm:w-auto h-13 px-8! py-3.5! text-md [&>svg]:size-auto! bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-lg shadow-indigo-500/30 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
+            onClick={() => scrollToSection("projects")}
           >
             Explorar Projetos <ArrowRightIcon size={20} />
-          </a>
+          </Button>
+
           <a
             href="https://github.com/josevitorsoares/"
             target="_blank"
