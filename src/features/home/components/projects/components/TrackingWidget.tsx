@@ -183,7 +183,9 @@ export function TrackingWidget() {
           </form>
         </Form>
         <div className="flex-1 overflow-y-auto max-h-62.5 custom-scrollbar pr-2 custom-scrollbar">
-          {!trackingData && !isFetching && (
+          {isFetching && <TracksSkeleton />}
+
+          {!trackingData && !isFetching && !error && (
             <div className="h-full flex flex-col items-center justify-center text-slate-400 text-center py-8">
               <TruckIcon size={48} className="mb-3 opacity-20" />
               <div className="text-sm flex flex-col">
@@ -192,8 +194,6 @@ export function TrackingWidget() {
               </div>
             </div>
           )}
-
-          {isFetching && <TracksSkeleton />}
 
           {error && (
             <div className="h-full flex flex-col items-center justify-center text-slate-400 text-center py-8">
