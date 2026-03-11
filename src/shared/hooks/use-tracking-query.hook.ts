@@ -22,6 +22,6 @@ export function useTrackingQuery(data: Package | null) {
     placeholderData: keepPreviousData,
     staleTime: 1000 * 60 * 5,
     enabled: !!data,
-    refetchOnWindowFocus: true,
+    refetchOnWindowFocus: false,
   });
 }

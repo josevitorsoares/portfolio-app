@@ -1,5 +1,5 @@
 import { getArticleAction } from "@/api/actions";
-import { useQuery } from "@tanstack/react-query";
+import { keepPreviousData, useQuery } from "@tanstack/react-query";
 
 export function useArticleQuery() {
   const articleQuery: string[] = ["article"] as const;
@@ -15,5 +15,8 @@ export function useArticleQuery() {
 
       return response.data;
     },
+    placeholderData: keepPreviousData,
+    staleTime: Infinity,
+    refetchOnWindowFocus: false,
   });
 }
