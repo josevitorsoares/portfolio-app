@@ -58,7 +58,7 @@ export function ArticleDialog({ trigger }: ArticleDialogProps) {
               download="Shorextractor_-_Um_Aplicativo_Desktop_Para_Extracao_Automatica_de_Linhas_de_Costa"
               tabIndex={-1}
             >
-              <Button className="w-8 h-8 md:w-55 md:h-12 p-0! bg-slate-900 dark:bg-white md:[&>svg]:size-auto! text-white text-md dark:text-slate-900 rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center gap-2">
+              <Button className="w-8 h-8 md:w-55 md:h-12 p-0! bg-slate-900 dark:bg-white md:[&>svg]:size-auto! text-white text-md dark:text-slate-900 rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center gap-2 cursor-pointer">
                 <DownloadIcon className="size-5" />
                 <span className="hidden md:inline">Baixar PDF Original</span>
               </Button>
