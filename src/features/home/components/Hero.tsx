@@ -39,9 +39,9 @@ export function Hero() {
         </h1>
 
         <p className="max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-300 mb-10 leading-relaxed">
-          Bem-vindo ao meu espaço digital. Aqui centralizo meus estudos,
-          experimentos técnicos e projetos pessoais. Focado em evoluir
-          constantemente e compartilhar conhecimento sobre desenvolvimento web.
+          Bem-vindo ao meu espaço digital. Aqui você encontra um resumo da minha
+          trajetória, projetos de destaque e as tecnologias que utilizo para
+          transformar ideias em soluções robustas e eficientes.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
