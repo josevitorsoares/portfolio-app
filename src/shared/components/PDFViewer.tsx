@@ -54,9 +54,6 @@ const PDFLazyPage = memo(
       setAspectRatio(realAspectRatio);
     };
 
-    // Altura baseada na proporção padrão de papel A4 para evitar colapso de layout
-    // const estimatedHeight = width * 1.41;
-
     return (
       <div
         ref={setRefs}
@@ -97,62 +94,6 @@ type PDFViewerProps = {
 };
 
 export function PDFViewer({ fileUrl }: PDFViewerProps) {
-  // const [numPages, setNumPages] = useState<number>(0);
-  // const [currentPage, setCurrentPage] = useState<number>(0);
-  // const [zoom, setZoom] = useState<number>(0);
-
-  // const containerRef = useRef<HTMLDivElement>(null);
-  // const containerWidth = useContainerWidth(containerRef);
-
-  // const baseWidth = Math.min(containerWidth || 740, 1000);
-  // const currentWidth = baseWidth * zoom;
-
-  // const handlePageVisible = useCallback((page: number) => {
-  //   setCurrentPage(page);
-  // }, []);
-
-  // const handleJumpToPage = (page: number) => {
-  //   const element = document.getElementById(`pdf-page-${page}`);
-
-  //   if (!element) {
-  //     return;
-  //   }
-
-  //   element.scrollIntoView({ behavior: "smooth", block: "start" });
-  //   setCurrentPage(page);
-  // };
-
-  // return (
-  //   <div
-  //     ref={containerRef}
-  //     className="relative flex flex-col items-center overflow-auto h-screen w-full bg-white dark:bg-slate-800 pb-12 " //py-4
-  //   >
-  //     <Document
-  //       file={fileUrl}
-  //       onLoadSuccess={({ numPages }) => setNumPages(numPages)}
-  //       // loading
-  //     >
-  //       {Array.from(new Array(numPages), (_, index) => (
-  //         <PDFLazyPage
-  //           key={`pag_${index + 1}`}
-  //           pageNumber={index + 1}
-  //           width={currentWidth}
-  //           onVisible={handlePageVisible}
-  //         />
-  //       ))}
-  //     </Document>
-
-  //     {numPages > 0 && (
-  //       <PDFToolbar
-  //         currentPage={currentPage}
-  //         numPages={numPages}
-  //         zoom={zoom}
-  //         onPageChange={handleJumpToPage}
-  //         onZoomChange={setZoom}
-  //       />
-  //     )}
-  //   </div>
-  // );
   const [numPages, setNumPages] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [zoom, setZoom] = useState<number>(1);
