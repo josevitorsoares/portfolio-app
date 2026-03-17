@@ -1,5 +1,5 @@
+import { cn } from "@/shared/lib";
 import type { ComponentProps, JSX } from "react";
-import { cn } from "../lib";
 
 /**
  * @component @name Fastify
