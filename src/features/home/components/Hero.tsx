@@ -58,7 +58,7 @@ export function Hero() {
             rel="noreferrer"
             className="w-full sm:w-auto px-8 py-3.5 bg-white dark:bg-slate-800 text-slate-700 dark:text-white font-semibold rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/80 transition-all flex items-center justify-center gap-2"
           >
-            <GitHubIcon className="size-5 fill-white" /> GitHub
+            <GitHubIcon className="size-5 fill-black dark:fill-white" /> GitHub
           </a>
         </div>
 
@@ -81,7 +81,9 @@ export function Hero() {
             />
             <TechBadge
               className="hover:-translate-y-1 text-md sm:text-lg"
-              icon={<FastifyIcon className="size-4 sm:size-5 fill-white" />}
+              icon={
+                <FastifyIcon className="size-4 sm:size-5 fill-black dark:fill-white" />
+              }
               label="Fastify"
             />
             <TechBadge

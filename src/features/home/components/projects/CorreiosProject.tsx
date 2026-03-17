@@ -27,7 +27,7 @@ export function CorreiosProject() {
         <div className="flex flex-wrap gap-2 mb-8">
           <TechBadge icon={<Code2Icon size={14} />} label="Node.js" />
           <TechBadge
-            icon={<FastifyIcon className="size-3.5 fill-white" />}
+            icon={<FastifyIcon className="size-3.5 fill-slate-600 dark:fill-white" />}
             label="Fastify API"
           />
           <TechBadge icon={<DatabaseIcon size={14} />} label="Redis" />
@@ -38,7 +38,7 @@ export function CorreiosProject() {
           target="_blank"
           className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl font-semibold hover:opacity-90 transition-opacity"
         >
-          <GitHubIcon className="size-5" /> Ver documentação da API
+          <GitHubIcon className="size-5 fill-white dark:fill-black" /> Ver documentação da API
         </a>
       </div>
     </div>
