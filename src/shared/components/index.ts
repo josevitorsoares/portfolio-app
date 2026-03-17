@@ -5,4 +5,3 @@ export * from "./LinkedInIcon";
 export * from "./LogoIcon";
 export * from "./PDFToolbar";
 export * from "./PDFViewer";
-export * from "./XIcon";
