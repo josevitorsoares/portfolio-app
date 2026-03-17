@@ -61,8 +61,8 @@ const PDFToolbar = memo(
     };
 
     return (
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-white dark:bg-slate-800 shadow-xl border border-slate-200 dark:border-slate-700 rounded-lg px-2 md:px-4 py-2 flex items-center gap-4 z-50">
-        <div className="flex items-center gap-2 border-r border-gray-300 dark:border-zinc-700 pr-4">
+      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-white dark:bg-slate-800 shadow-xl border border-slate-200 dark:border-slate-700 rounded-lg px-2 md:px-4 py-2 flex items-center gap-2 sm:gap-4 z-50">
+        <div className="flex items-center gap-0 sm:gap-2 border-r border-gray-300 dark:border-zinc-700 pr-0 sm:pr-4">
           <Button
             onClick={handleZoomOut}
             disabled={zoom <= ZOOM_CONFIG.MIN}
@@ -80,7 +80,7 @@ const PDFToolbar = memo(
           <Button
             onClick={handleZoomIn}
             disabled={zoom >= ZOOM_CONFIG.MAX}
-            className="p-1  size-7 bg-transparent md:[&>svg]:size-auto! hover:bg-slate-200 dark:hover:bg-slate-900 disabled:opacity-50 disabled:cursor-not-allowed rounded transition-colors"
+            className="p-1 size-7 bg-transparent md:[&>svg]:size-auto! hover:bg-slate-200 dark:hover:bg-slate-900 disabled:opacity-50 disabled:cursor-not-allowed rounded transition-colors"
             aria-label="Aumentar Zoom"
             title="Aumentar Zoom"
           >
@@ -89,7 +89,7 @@ const PDFToolbar = memo(
         </div>
 
         {/* Controles de Paginação */}
-        <div className="flex items-center gap-2 text-xs md:text-sm">
+        <div className="flex items-center gap-1 sm:gap-2 text-xs md:text-sm">
           <span>Página</span>
           <Input
             type="number"
@@ -97,7 +97,7 @@ const PDFToolbar = memo(
             onChange={(event) => setInputPage(event.target.value)}
             onBlur={handlePageSubmit}
             onKeyDown={handleKeyDown}
-            className="w-7 h-9 p-0 md:w-12 text-center border border-slate-200 dark:border-slate-700 rounded bg-transparent md:py-1 hide-arrows focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-7 h-7 sm:h-8 p-0 md:w-10 text-sm sm:text-md text-center border border-slate-200 dark:border-slate-700 rounded bg-transparent md:py-1 hide-arrows focus:outline-none focus:ring-2 focus:ring-blue-500"
             min={1}
             max={numPages}
           />

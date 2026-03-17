@@ -119,26 +119,31 @@ export function PDFViewer({ fileUrl }: PDFViewerProps) {
   return (
     <div
       ref={containerRef}
-      className="relative rounded-md flex flex-col items-center overflow-auto h-screen w-full bg-white dark:bg-slate-800 py-4"
+      className="relative rounded-md overflow-auto h-screen w-full bg-white dark:bg-slate-800 py-4"
     >
-      <Document
-        file={fileUrl}
-        onLoadSuccess={({ numPages }) => setNumPages(numPages)}
-        loading={
-          <p className="text-blue-500 py-10 font-medium">
-            Carregando documento...
-          </p>
-        }
+      <div
+        className="flex flex-col items-center"
+        style={{ minWidth: currentWidth }}
       >
-        {Array.from(new Array(numPages), (_, index) => (
-          <PDFLazyPage
-            key={`page_${index + 1}`}
-            pageNumber={index + 1}
-            width={currentWidth}
-            onVisible={handlePageVisible}
-          />
-        ))}
-      </Document>
+        <Document
+          file={fileUrl}
+          onLoadSuccess={({ numPages }) => setNumPages(numPages)}
+          loading={
+            <p className="text-blue-500 py-10 font-medium">
+              Carregando documento...
+            </p>
+          }
+        >
+          {Array.from(new Array(numPages), (_, index) => (
+            <PDFLazyPage
+              key={`page_${index + 1}`}
+              pageNumber={index + 1}
+              width={currentWidth}
+              onVisible={handlePageVisible}
+            />
+          ))}
+        </Document>
+      </div>
 
       {numPages > 0 && (
         <PDFToolbar
