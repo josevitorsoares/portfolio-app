@@ -77,7 +77,7 @@ export function ArticleDialog({ trigger }: ArticleDialogProps) {
         </div>
 
         <div className="flex-1 bg-slate-100 dark:bg-black/50 p-4 overflow-hidden relative group">
-          <div className="w-full h-full bg-white dark:bg-slate-800 shadow-sm rounded-lg flex flex-col items-center justify-center text-center pb-9 border border-slate-200 dark:border-slate-700">
+          <div className="w-full h-full bg-white dark:bg-slate-800 shadow-sm rounded-lg flex flex-col items-center justify-center text-center pb-8 border border-slate-200 dark:border-slate-700">
             <PDFViewer fileUrl={pdfURL} />
           </div>
         </div>
