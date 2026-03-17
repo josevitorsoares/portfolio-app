@@ -1,13 +1,21 @@
-import type { ReactNode } from "react";
+import { cn } from "@/shared/lib";
+import type { ComponentProps, ReactNode } from "react";
 
 type TechBadgeProps = {
   icon: ReactNode;
   label: string;
-};
+} & ComponentProps<"div">;
 
-export function TechBadge({ icon, label }: TechBadgeProps) {
+export function TechBadge({ ref, icon, label, ...props }: TechBadgeProps) {
   return (
-    <div className="flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-800/50 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300">
+    <div
+      ref={ref}
+      {...props}
+      className={cn(
+        "flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-800/50 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300",
+        props.className,
+      )}
+    >
       {icon}
       <span>{label}</span>
     </div>
