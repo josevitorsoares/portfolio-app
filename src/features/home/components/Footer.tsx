@@ -1,7 +1,9 @@
-import { GitHubIcon, LinkedInIcon } from "@/shared/components";
+import { GitHubIcon, LinkedInIcon } from "@/shared/components/icons";
 import { MailIcon } from "lucide-react";
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="py-12 bg-slate-900 dark:bg-black text-center border-t border-slate-800">
       <div className="flex justify-center gap-6 mb-6">
@@ -27,7 +29,8 @@ export function Footer() {
         </a>
       </div>
       <p className="text-slate-500 text-sm">
-        © 2026 José Vitor Soares. Desenvolvido com React & Tailwind CSS.
+        © {currentYear} José Vitor Soares. Desenvolvido com React & Tailwind
+        CSS.
       </p>
     </footer>
   );

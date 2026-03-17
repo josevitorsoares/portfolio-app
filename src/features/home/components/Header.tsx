@@ -1,4 +1,4 @@
-import { LogoIcon } from "@/shared/components";
+import { LogoIcon } from "@/shared/components/icons";
 import { Button } from "@/shared/components/ui";
 import { useScrollSpy, useSmoothScroll } from "@/shared/hooks";
 import { cn } from "@/shared/lib";

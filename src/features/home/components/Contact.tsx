@@ -1,4 +1,4 @@
-import { LinkedInIcon } from "@/shared/components";
+import { LinkedInIcon } from "@/shared/components/icons";
 import { MailIcon } from "lucide-react";
 
 export function Contact() {

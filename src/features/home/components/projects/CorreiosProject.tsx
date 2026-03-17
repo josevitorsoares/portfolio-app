@@ -1,4 +1,4 @@
-import { FastifyIcon, GitHubIcon } from "@/shared/components";
+import { FastifyIcon, GitHubIcon } from "@/shared/components/icons";
 import { Code2Icon, CodeIcon, DatabaseIcon } from "lucide-react";
 import { TechBadge } from "../TechBadge";
 import { TrackingWidget } from "./components";
