@@ -1,14 +1,18 @@
-import { GitHubIcon } from "@/shared/components";
+import {
+  FastifyIcon,
+  GitHubIcon,
+  MongoDBIcon,
+  NextJSIcon,
+  NodeJSIcon,
+  PostgreSQLIcon,
+  ReactIcon,
+  RedisIcon,
+  TailwindCSSIcon,
+  TypeScriptIcon,
+} from "@/shared/components/icons";
 import { Button } from "@/shared/components/ui";
 import { useSmoothScroll } from "@/shared/hooks";
-import {
-  ArrowRightIcon,
-  CodeIcon,
-  DatabaseIcon,
-  LayoutIcon,
-  SmartphoneIcon,
-  TerminalIcon,
-} from "lucide-react";
+import { ArrowRightIcon, TerminalIcon } from "lucide-react";
 import { TechBadge } from "./TechBadge";
 
 export function Hero() {
@@ -58,18 +62,60 @@ export function Hero() {
           </a>
         </div>
 
-        <div className="mt-20 pt-8 border-t border-slate-200 dark:border-slate-800">
-          <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 font-medium">
+        <div className="flex flex-col items-center mt-20 pt-8 border-t border-slate-200 dark:border-slate-800">
+          <p className="text-sm sm:text-lg text-slate-500 dark:text-slate-400 mb-6 font-medium">
             Stack & Ferramentas
           </p>
-          <div className="flex flex-wrap justify-center gap-4 text-slate-400">
-            <TechBadge icon={<LayoutIcon size={16} />} label="Frontend" />
-            <TechBadge icon={<DatabaseIcon size={16} />} label="Backend" />
+          <div className="flex flex-wrap justify-center gap-4 text-slate-400 max-w-3xl">
             <TechBadge
-              icon={<SmartphoneIcon size={16} />}
-              label="Mobile First"
+              className="hover:-translate-y-1 text-md sm:text-lg"
+              icon={
+                <TypeScriptIcon className="size-4 sm:size-5 fill-[#3178C6] bg-white rounded-xs" />
+              }
+              label="TypeScript"
             />
-            <TechBadge icon={<CodeIcon size={16} />} label="Clean Code" />
+            <TechBadge
+              className="hover:-translate-y-1 text-md sm:text-lg"
+              icon={<NodeJSIcon className="size-4 sm:size-5 fill-[#5FA04E]" />}
+              label="Node.JS"
+            />
+            <TechBadge
+              className="hover:-translate-y-1 text-md sm:text-lg"
+              icon={<FastifyIcon className="size-4 sm:size-5 fill-white" />}
+              label="Fastify"
+            />
+            <TechBadge
+              className="hover:-translate-y-1 text-md sm:text-lg"
+              icon={<ReactIcon className="size-4 sm:size-5 fill-[#61DAFB]" />}
+              label="React"
+            />
+            <TechBadge
+              className="hover:-translate-y-1 text-md sm:text-lg"
+              icon={<NextJSIcon className="size-4 sm:size-5 fill-black" />}
+              label="NextJS"
+            />
+            <TechBadge
+              className="hover:-translate-y-1 text-md sm:text-lg"
+              icon={
+                <TailwindCSSIcon className="size-4 sm:size-5 fill-[#06B6D4]" />
+              }
+              label="TailwindCSS"
+            />
+            <TechBadge
+              className="hover:-translate-y-1 text-md sm:text-lg"
+              icon={<PostgreSQLIcon className="size-4 sm:size-5" />}
+              label="PostgreSQL"
+            />
+            <TechBadge
+              className="hover:-translate-y-1 text-md sm:text-lg"
+              icon={<MongoDBIcon className="size-4 sm:size-5 fill-[#47A248]" />}
+              label="MongoDB"
+            />
+            <TechBadge
+              className="hover:-translate-y-1 text-md sm:text-lg"
+              icon={<RedisIcon className="size-4 sm:size-5 fill-[#FF4438]" />}
+              label="Redis"
+            />
           </div>
         </div>
       </div>
